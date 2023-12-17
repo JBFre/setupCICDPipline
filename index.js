@@ -6,8 +6,12 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// Export the app
+module.exports = app;
 
-//test
+// Start the app if it's the main module
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}

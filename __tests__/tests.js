@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); // assuming your index.js is one level above the tests directory
+const app = require('../index');
 
 describe('GET /', () => {
   it('responds with "Hello World"', async () => {
@@ -7,3 +7,5 @@ describe('GET /', () => {
     expect(response.text).toBe('Hello World');
   });
 });
+
+module.exports = app;
