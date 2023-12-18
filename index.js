@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const firebase = require('firebase/app'); 
+const db = firebase.firestore();
+const auth = firebase.auth();
 const port = 3000;
 
 app.get('/', (req, res) => {
